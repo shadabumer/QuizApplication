@@ -16,16 +16,15 @@ namespace QuizApplication.Controllers {
         }
 
         [HttpPost]
-        public IActionResult Quiz(int id) {
+        public IActionResult Quiz(int id, int QuestionID) {
             if (id <= 5) {
                 List<Quiz> ListQuestions = new List<Quiz>();
                 ListQuestions = objquiz.GetAllQuestions(id).ToList();
 
                 return View(ListQuestions);
             } else {
-                return NotFound();
+                return View("Score");
             }
-            
         }
     }
 }

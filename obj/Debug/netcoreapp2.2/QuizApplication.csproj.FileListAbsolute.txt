@@ -30,3 +30,4 @@ E:\PlayGround\C#\Assignments\quiz\QuizApplication\obj\Debug\netcoreapp2.2\QuizAp
 E:\PlayGround\C#\Assignments\quiz\QuizApplication\obj\Debug\netcoreapp2.2\QuizApplication.csproj.CopyComplete
 E:\PlayGround\C#\Assignments\quiz\QuizApplication\obj\Debug\netcoreapp2.2\Razor\Views\Login\Login.g.cshtml.cs
 E:\PlayGround\C#\Assignments\quiz\QuizApplication\obj\Debug\netcoreapp2.2\Razor\Views\Quiz\Quiz.g.cshtml.cs
+E:\PlayGround\C#\Assignments\quiz\QuizApplication\obj\Debug\netcoreapp2.2\Razor\Views\Quiz\Score.g.cshtml.cs

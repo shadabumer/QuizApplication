@@ -2968,6 +2968,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "Views\\Quiz\\Score.cshtml",
+      "TargetPath": "Views\\Quiz\\Score.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views\\Login\\Login.cshtml",
       "TargetPath": "Views\\Login\\Login.cshtml",
       "FileKind": "mvc"

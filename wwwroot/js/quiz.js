@@ -83,12 +83,43 @@ console.log("quiz.js file is loaded");
 
 const button = document.querySelector('.btn');
 const isChecked = document.querySelectorAll('.is-checked');
+const dataOption = document.querySelector('.is-checked').dataset.option;
 // console.log(button);
+
+/**
+ * To check if any of the radio button is selected. If any radio button is selected then the next button is enabled
+ * by removing the disabled attribute.
+ */
 
 isChecked.forEach(element => {
     element.addEventListener('change', function(e) {
         if(this.checked) {
-            button.removeAttribute('disabled')
+            button.removeAttribute('disabled');
         } 
     })
 });
+
+/**
+ * Function to get the correct option from database to javascript using data- attribute used in input tag
+ */
+var userAnswers = [];
+let options = [];
+
+function correctOptions() {
+    options.push(dataOption);
+}
+correctOptions();
+console.log(options);
+
+// button.addEventListener('click', () => {
+//     console.log("next button is clicked!");
+//     correctOptions.push(dataOption);
+// })
+
+
+
+
+// button.addEventListener('click', () => {
+//     if(button.hasAttribute('disabled'))
+//         alert('Please select any option to go next!');
+// });
