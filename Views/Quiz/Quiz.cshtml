@@ -16,18 +16,18 @@
                             for(int i = 0; i < item.Options.Length; i++) {
                                 <div class="form-check">
                                     <input 
-                                    class="form-check-input is-checked" 
+                                    class="form-check-input" 
                                     value="@item.Options[i]"
                                     name="@item.QuestionID"
-                                    asp-for="@item.Options[i]"
-                                    type="radio" /><label asp-for="@item.Options[i]"
-                                    required>@item.Options[i]</label>
+                                    id="@item.Options[i]"
+                                    type="radio" />
+                                    <label for="@item.Options[i]">@item.Options[i]</label>
                                 </div>
                             }
                         }
                     </div>
                 </section>
-                <input class="btn btn-primary"  type="submit"asp-action="Quiz"class="btn btn-outline-primary" value="Quiz"/>
+                <input class="btn btn-primary" type="submit" asp-action="Quiz" class="btn btn-outline-primary" value="next"/>
             </div>
         </div>
     }
