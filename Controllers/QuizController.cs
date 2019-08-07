@@ -19,7 +19,6 @@ namespace QuizApplication.Controllers {
         public IActionResult Quiz(int id) {
             List<Quiz> ListQuestions = new List<Quiz>();
             ListQuestions = objquiz.GetAllQuestions(id).ToList();
-            id++;
 
             return View(ListQuestions);
         }

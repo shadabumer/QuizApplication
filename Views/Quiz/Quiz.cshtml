@@ -4,7 +4,7 @@
     ViewData["Title"] = "Quiz Questions";    
 } 
 
-<form method="post" asp-controller="Quiz" asp-action="quiz">
+<form method="post">
     @foreach (var item in Model) {
         <div class=" container card  border-primary  mb-3">
             <div class="card-header">Question <span>@item.QuestionID</span></div>
@@ -12,7 +12,7 @@
                 <h5 class="card-title">@item.Question</h5>
                 <section class="card-text" id="option-section">
                     <div class="custom-control custom-radio">
-                        @{
+                        @{ 
                             for(int i = 0; i < item.Options.Length; i++) {
                                 <div class="form-check">
                                     <input 
@@ -27,7 +27,9 @@
                         }
                     </div>
                 </section>
-                <input class="btn btn-primary" type="submit" asp-action="Quiz" class="btn btn-outline-primary" value="next"/>
+                @{
+                    <input class="btn btn-primary" type="submit" asp-action="Quiz" asp-route-id="@Quiz.QuestionID" class="btn btn-outline-primary" value="next"/>
+                }
             </div>
         </div>
     }
