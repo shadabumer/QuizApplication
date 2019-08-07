@@ -4,6 +4,7 @@
     ViewData["Title"] = "Quiz Questions";    
 } 
 
+
 <form method="post">
     @foreach (var item in Model) {
         <div class=" container card  border-primary  mb-3">
@@ -16,15 +17,16 @@
                             for(int i = 0; i < item.Options.Length; i++) {
                                 <div class="form-check">
                                     <input 
-                                    class="form-check-input" 
+                                    class="form-check-input is-checked" 
                                     value="@item.Options[i]"
                                     name="@item.QuestionID"
-                                    id="@item.Options[i]"
-                                    type="radio" />
-                                    <label for="@item.Options[i]">@item.Options[i]</label>
+                                    id="check-@i"
+                                    type="radio"
+                                    />
+                                    <label for="check-@i">@item.Options[i]</label>
                                 </div>
                             }
-                            <input class="btn btn-primary" type="submit" asp-action="Quiz" asp-route-id="@(item.QuestionID + 1)" class="btn btn-outline-primary" value="next"/>
+                            <input class="btn btn-primary" type="submit" asp-action="Quiz" asp-route-id="@(item.QuestionID + 1)" class="btn btn-outline-primary" value="next" disabled/>
                         }
                     </div>
                 </section>
@@ -32,3 +34,4 @@
         </div>
     }
 </form>
+<script src="~/js/quiz.js"></script>

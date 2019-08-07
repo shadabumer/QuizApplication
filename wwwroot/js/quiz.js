@@ -79,3 +79,16 @@
 
 // next.addEventListener('click', nextElement);
 
+console.log("quiz.js file is loaded");
+
+const button = document.querySelector('.btn');
+const isChecked = document.querySelectorAll('.is-checked');
+// console.log(button);
+
+isChecked.forEach(element => {
+    element.addEventListener('change', function(e) {
+        if(this.checked) {
+            button.removeAttribute('disabled')
+        } 
+    })
+});
