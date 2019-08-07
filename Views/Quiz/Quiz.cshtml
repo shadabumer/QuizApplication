@@ -24,12 +24,10 @@
                                     <label for="@item.Options[i]">@item.Options[i]</label>
                                 </div>
                             }
+                            <input class="btn btn-primary" type="submit" asp-action="Quiz" asp-route-id="@(item.QuestionID + 1)" class="btn btn-outline-primary" value="next"/>
                         }
                     </div>
                 </section>
-                @{
-                    <input class="btn btn-primary" type="submit" asp-action="Quiz" asp-route-id="@Quiz.QuestionID" class="btn btn-outline-primary" value="next"/>
-                }
             </div>
         </div>
     }
